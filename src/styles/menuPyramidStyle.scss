@@ -1,0 +1,66 @@
+.piramid-money-wrapper {
+  position: fixed;
+  width: 900px;
+  height: 100wh;
+  left: 1064px;
+  top: 166px;
+
+  background-color: #eeeeee;
+
+  .piramid-money-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px;
+    width: 376px;
+
+    .piramid-money-omount-active {
+      background: #3891b1;
+    }
+  }
+  .piramid-money-list span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+    border: 1px solid #d0d0d8;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 100%;
+    width: 240px;
+    height: 40px;
+    padding: 0 20px;
+    text-align: center;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    position: relative;
+  }
+  .piramid-money-list span::before,
+  .piramid-money-list span::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 0px;
+    height: 4px;
+    background-color: #d0d0d8;
+  }
+
+  .piramid-money-list span::before {
+    left: 20px;
+    transform: translate(-50%, -50%);
+  }
+
+  .piramid-money-list span::after {
+    right: 20px;
+    transform: translate(50%, -50%);
+  }
+
+  .piramid-money-list span:focus,
+  .piramid-money-list span:hover {
+    background: #fff3eb;
+    border: 1px solid #1e6a8e;
+  }
+}

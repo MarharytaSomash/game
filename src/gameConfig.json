@@ -1,0 +1,91 @@
+{
+  "pyramidMoney": [
+    { "id": 1, "amount": "500$" },
+    { "id": 2, "amount": "1000$" },
+    { "id": 3, "amount": "2000$" },
+    { "id": 4, "amount": "4000$" },
+    { "id": 5, "amount": "8000$" },
+    { "id": 6, "amount": "16000$" },
+    { "id": 7, "amount": "32000$" },
+    { "id": 8, "amount": "64000$" },
+    { "id": 9, "amount": "125000$" },
+    { "id": 10, "amount": "250000$" },
+    { "id": 11, "amount": "500000$" },
+    { "id": 12, "amount": "1000000$" }
+  ],
+
+  "questions": [
+    {
+      "id": 1,
+      "questionText": "What is the capital city of Ukraine?",
+      "answers": [" Kyiv", "Kharkiv", "Lviv", "Odessa"],
+      "correctAnswer": " Kyiv"
+    },
+    {
+      "id": 2,
+      "questionText": "Which river flows through Kyiv?",
+      "answers": ["Dnipro", "Danube", "Volga", "Don"],
+      "correctAnswer": "Dnipro"
+    },
+    {
+      "id": 3,
+      "questionText": "What is the official language of Ukraine?",
+      "answers": ["Ukrainian", "Russian", "Polish", "English"],
+      "correctAnswer": "Ukrainian"
+    },
+    {
+      "id": 4,
+      "questionText": "Which historical site is located in Kyiv?",
+      "answers": ["Saint Sophia Cathedral", "Eiffel Tower", "Great Wall of China", "Taj Mahal"],
+      "correctAnswer": "Saint Sophia Cathedral"
+    },
+    {
+      "id": 5,
+      "questionText": "What is the traditional Ukrainian folk instrument?",
+      "answers": ["Bandura", "Accordion", "Guitar", "Violin"],
+      "correctAnswer": "Bandura"
+    },
+    {
+      "id": 6,
+      "questionText": "Which Ukrainian city is known for its annual Lviv Coffee Festival?",
+      "answers": ["Lviv", "Kharkiv", "Kyiv", "Odessa"],
+      "correctAnswer": "Lviv"
+    },
+    {
+      "id": 7,
+      "questionText": "What is the highest mountain in Ukraine?",
+      "answers": ["Hoverla", "Carpathians", "Himalayas", "Mont Blanc"],
+      "correctAnswer": "Hoverla"
+    },
+    {
+      "id": 8,
+      "questionText": "Which Ukrainian writer was awarded the Nobel Prize in Literature?",
+      "answers": ["Taras Shevchenko", "Ivan Franko", "Lesya Ukrainka", "Svitlana Alexievich"],
+      "correctAnswer": "Svitlana Alexievich"
+    },
+    {
+      "id": 9,
+      "questionText": "What is the traditional Ukrainian dance?",
+      "answers": ["Hopak", "Waltz", "Salsa", "Breakdance"],
+      "correctAnswer": "Hopak"
+    },
+    {
+      "id": 10,
+      "questionText": "Which Ukrainian dish is made from grated potatoes?",
+      "answers": ["Deruny", "Borscht", "Varenyky", "Holubtsi"],
+      "correctAnswer": "Deruny"
+    },
+    {
+      "id": 11,
+      "questionText": "Which Ukrainian city is famous for its annual Odesa International Film Festival?",
+      "answers": ["Odessa", "Kyiv", "Lviv", "Kharkiv"],
+      "correctAnswer": "Odessa"
+    },
+    {
+      "id": 12,
+      "questionText": "Who is the national poet of Ukraine?",
+      "answers": ["Taras Shevchenko", "Ivan Franko", "Lesya Ukrainka", "Olena Teliha"],
+      "correctAnswer": "Taras Shevchenko"
+    }
+  ]
+}

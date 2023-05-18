@@ -1,0 +1,12 @@
+.not-foud_page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(150, 184, 214);
+  margin-top: 50%;
+  font-size: 25px;
+  span {
+    color: rgb(8, 126, 149);
+    text-decoration: underline;
+  }
+}

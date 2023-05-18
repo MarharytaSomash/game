@@ -1,0 +1,89 @@
+.question {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 116%;
+  width: 75%;
+  height: 74px;
+  left: 80px;
+  top: 133px;
+  color: #1c1c21;
+}
+
+.hexagon-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style-type: none;
+  width: 842px;
+  margin-top: 600px;
+
+  .hexagon {
+    cursor: pointer;
+    margin: 30px auto;
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .hexagon button {
+    background-color: #ffffff;
+    border: 1px solid #d0d0d8;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 116%;
+    width: 421px;
+    height: 72px;
+    padding: 0 20px;
+    text-align: center;
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+    position: relative;
+  }
+  .hexagon button::before,
+  .hexagon button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 2px;
+    background-color: #d0d0d8;
+  }
+
+  .hexagon button::before {
+    left: 10px;
+    transform: translate(-50%, -50%);
+  }
+
+  .hexagon button::after {
+    right: 10px;
+    transform: translate(50%, -50%);
+  }
+
+  .hexagon button:focus,
+  .hexagon button:hover {
+    background: #fff3eb;
+    border: 1px solid #1e6a8e;
+  }
+  .hexagon .hexagon-button.correct {
+    animation: correct 3s ease forwards;
+    /* background: #0c5019; */
+    border: 1px solid #47d867;
+  }
+  @keyframes correct {
+    0% {
+      background-color: #e6faea;
+    }
+  }
+}
+
+.hexagon .hexagon-button.wrong {
+  background-color: #fdeeed;
+  border: 1px solid #ec6259;
+}
