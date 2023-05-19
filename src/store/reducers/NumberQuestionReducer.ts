@@ -13,7 +13,6 @@ export const NumberQuestionReducer = (state = initialState, { type, payload }: A
         id: payload + 1
       };
     }
-
     default: {
       return state;
     }

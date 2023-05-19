@@ -1,3 +1,8 @@
+@mixin flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .piramid-money-wrapper {
   position: fixed;
   width: 900px;
@@ -7,10 +12,8 @@
   background-color: #eeeeee;
 
   .piramid-money-list {
-    display: flex;
+    @include flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
     padding: 10px;
     width: 376px;
 
@@ -24,9 +27,7 @@
     }
   }
   .piramid-money-list span {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    @include flex;
     background-color: #ffffff;
     border: 1px solid #d0d0d8;
     font-family: 'Inter';

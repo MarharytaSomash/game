@@ -1,3 +1,11 @@
+@mixin styleForEarned {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  line-height: 116%;
+  color: #1c1c21;
+}
+
 .page-wrapper {
   display: flex;
   flex-direction: row;
@@ -25,22 +33,18 @@
     width: 624px;
     height: 258px;
     left: 736px;
-    /* top: 283px; */
 
     h1 {
+      @include styleForEarned;
       width: 624px;
       height: 130px;
       top: 283px;
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 600;
       font-size: 56px;
-      line-height: 116%;
       display: flex;
       align-items: center;
-      color: #1c1c21;
     }
     button {
+      @include styleForEarned;
       width: 296px;
       height: 64px;
       background: #1e6a8e;
@@ -49,9 +53,6 @@
       right: 0px;
       top: 500px;
       color: White;
-      font-family: 'Inter';
-      font-style: normal;
-      font-weight: 600;
       font-size: 20px;
       border-radius: 12px;
     }

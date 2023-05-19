@@ -26,7 +26,12 @@ const Question = () => {
       setTimeout(() => {
         if (answer === currentQuestion.correctAnswer) {
           dispatch(AnswerCorrect(answer));
-          dispatch(ChangeNumberQuestion(numberQuestion.id));
+          if (numberQuestion.id === gameConfig.questions.length) {
+            dispatch(ChangeNumberQuestion(0));
+            navigate(GAME_FINISH);
+          } else {
+            dispatch(ChangeNumberQuestion(numberQuestion.id));
+          }
           dispatch(AddEarnedMoney(gameConfig.pyramidMoney[numberQuestion.id - 1].amount));
           setIsCorrect(false);
         } else {

@@ -6,6 +6,7 @@ import '../styles/gameStartStyle.scss';
 function GameStart() {
   const navigate = useNavigate();
   const [active, setActive] = useState(false);
+
   const handleClick = () => {
     navigate(GAME);
     setActive(true);
