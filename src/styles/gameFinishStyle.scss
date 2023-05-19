@@ -10,56 +10,225 @@
   align-items: center;
   justify-content: center;
 }
-.finish-page-wrapper {
-  display: flex;
-  flex-direction: row;
-  position: relative;
-  width: 100%;
-  height: 100vh;
-
-  .wrapper-info {
+@media only screen and (max-width: 320px) {
+  .finish-page-wrapper {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 0px;
-    gap: 64px;
-    position: absolute;
-    width: 624px;
-    height: 258px;
-    left: 736px;
-    top: 283px;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    height: 100vh;
 
-    h1 {
-      @include flex;
-      @include styleForEarned;
-      font-size: 32px;
-      opacity: 0.5;
-    }
-    .earned {
-      @include styleForEarned;
-      font-size: 56px;
+    .wrapper-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0px;
+      gap: 64px;
       position: absolute;
-      top: 50px;
-    }
-    button {
-      @include styleForEarned;
-      width: 296px;
-      height: 64px;
-      background: #1e6a8e;
-      position: absolute;
-      left: 0px;
-      right: 0px;
-      top: 194px;
-      color: White;
+      width: 320px;
+      height: 200px;
 
-      font-size: 20px;
-      border-radius: 12px;
+      h1 {
+        @include flex;
+        @include styleForEarned;
+        position: fixed;
+        margin-top: 300px;
+        margin-left: 150px;
+        font-size: 18px;
+        opacity: 0.5;
+      }
+      .earned {
+        @include styleForEarned;
+        font-size: 37px;
+        position: fixed;
+        margin-top: 340px;
+        margin-left: 150px;
+      }
+      button {
+        @include styleForEarned;
+        width: 288px;
+        height: 48px;
+        background: #1e6a8e;
+        position: fixed;
+        margin-top: 440px;
+        margin-left: 40px;
+        color: White;
+
+        font-size: 20px;
+        border-radius: 12px;
+      }
+      button:hover {
+        background-color: #3891b1;
+      }
+      button.active {
+        background-color: #003b63;
+      }
     }
-    button:hover {
-      background-color: #3891b1;
+  }
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .finish-page-wrapper {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    .wrapper-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0px;
+      gap: 64px;
+      position: absolute;
+      width: 320px;
+      height: 200px;
+
+      h1 {
+        @include flex;
+        @include styleForEarned;
+        position: fixed;
+        margin-top: 300px;
+        margin-left: 80px;
+        font-size: 25px;
+        opacity: 0.5;
+      }
+      .earned {
+        @include styleForEarned;
+        font-size: 40px;
+        position: fixed;
+        margin-top: 340px;
+        margin-left: 80px;
+      }
+      button {
+        @include styleForEarned;
+        width: 288px;
+        height: 48px;
+        background: #1e6a8e;
+        position: fixed;
+        margin-top: 440px;
+        margin-left: 60px;
+        color: White;
+
+        font-size: 20px;
+        border-radius: 12px;
+      }
+      button:hover {
+        background-color: #3891b1;
+      }
+      button.active {
+        background-color: #003b63;
+      }
     }
-    button.active {
-      background-color: #003b63;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+  .finish-page-wrapper {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    .wrapper-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0px;
+      gap: 64px;
+      position: absolute;
+      width: 624px;
+      height: 200px;
+
+      h1 {
+        @include flex;
+        @include styleForEarned;
+        position: fixed;
+        margin-top: 100px;
+        margin-left: 380px;
+        font-size: 30px;
+        opacity: 0.5;
+      }
+      .earned {
+        @include styleForEarned;
+        font-size: 45px;
+        position: fixed;
+        margin-top: 140px;
+        margin-left: 380px;
+      }
+      button {
+        @include styleForEarned;
+        width: 288px;
+        height: 48px;
+        background: #1e6a8e;
+        position: fixed;
+        margin-top: 220px;
+        margin-left: 380px;
+        color: White;
+
+        font-size: 20px;
+        border-radius: 12px;
+      }
+      button:hover {
+        background-color: #3891b1;
+      }
+      button.active {
+        background-color: #003b63;
+      }
+    }
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .finish-page-wrapper {
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+
+    .wrapper-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 0px;
+      gap: 64px;
+      position: absolute;
+      width: 624px;
+      height: 258px;
+      left: 736px;
+      top: 283px;
+
+      h1 {
+        @include flex;
+        @include styleForEarned;
+        font-size: 32px;
+        opacity: 0.5;
+      }
+      .earned {
+        @include styleForEarned;
+        font-size: 56px;
+        position: absolute;
+        top: 50px;
+      }
+      button {
+        @include styleForEarned;
+        width: 296px;
+        height: 64px;
+        background: #1e6a8e;
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        top: 194px;
+        color: White;
+        font-size: 20px;
+        border-radius: 12px;
+      }
+      button:hover {
+        background-color: #3891b1;
+      }
+      button.active {
+        background-color: #003b63;
+      }
     }
   }
 }
