@@ -7,14 +7,18 @@ import { GAME_FINISH } from '../constants/path';
 import { AnswerCorrect } from '../store/actions/AswerCorrect';
 import '../styles/questionStyle.scss';
 import { AnswerWrong } from '../store/actions/AswerWrong';
+import { ChangeNumberQuestion } from '../store/actions/ChangeNumberQuestion';
+import { AddEarnedMoney } from '../store/actions/AddEarnedMoney';
 
 const Question = () => {
-  const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
-  const currentQuestion = gameConfig.questions[currentQuestionIndex];
   const navigate = useNavigate();
   const dispatch = useDispatch();
+
   const { answer } = useSelector((state: RootState) => state);
+  const { numberQuestion } = useSelector((state: RootState) => state);
+  const { earnedMoney } = useSelector((state: RootState) => state);
+  const currentQuestion = gameConfig.questions[numberQuestion.id - 1];
 
   const handleAnswer = (answer: string) => {
     setTimeout(() => {
@@ -22,7 +26,8 @@ const Question = () => {
       setTimeout(() => {
         if (answer === currentQuestion.correctAnswer) {
           dispatch(AnswerCorrect(answer));
-          setCurrentQuestionIndex(currentQuestionIndex + 1);
+          dispatch(ChangeNumberQuestion(numberQuestion.id));
+          dispatch(AddEarnedMoney(gameConfig.pyramidMoney[numberQuestion.id - 1].amount));
           setIsCorrect(false);
         } else {
           dispatch(AnswerWrong(answer));

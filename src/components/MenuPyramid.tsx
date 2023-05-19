@@ -1,21 +1,24 @@
 import React, { useEffect, useState } from 'react';
 import '../styles/menuPyramidStyle.scss';
 import gameConfig from '../gameConfig.json';
-import Question from './Question';
+import { useSelector } from 'react-redux';
+import { RootState } from '../store/reducers/rootReducer';
 
 const MenuPyramid = () => {
-  const [questionNumber, setQuestionNumber] = useState<number>(1);
-
+  const { numberQuestion } = useSelector((state: RootState) => state);
+  const { earnedMoney } = useSelector((state: RootState) => state);
+  const reversedPyramidMoney = [...gameConfig.pyramidMoney].reverse();
   return (
     <>
       <ul className="piramid-money-wrapper">
-        {gameConfig.pyramidMoney.reverse().map((item) => (
+        {reversedPyramidMoney.map((item) => (
           <li key={item.id} className="piramid-money-list">
             <span
-              className={
-                questionNumber === item.id ? 'piramid-money-omount-active' : 'piramid-money-omount'
-              }>
-              {item.amount}
+            // className={
+            //   numberQuestion === item.id ? 'piramid-money-amount-active' : 'piramid-money-amount'
+            // }
+            >
+              ${item.amount}
             </span>
           </li>
         ))}

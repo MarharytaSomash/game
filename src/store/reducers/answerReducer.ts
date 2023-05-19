@@ -10,13 +10,13 @@ export const answerReducer = (state = initialState, { type, payload }: Answer) =
     case CORRECT_ANSWER: {
       return {
         ...state,
-        payload
+        answer: payload
       };
     }
     case WRONG_ANSWER: {
       return {
         ...state,
-        payload
+        answer: payload
       };
     }
     default: {

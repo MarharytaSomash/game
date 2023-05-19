@@ -1,2 +1,4 @@
 export const CORRECT_ANSWER = 'CORRECT_ANSWER';
 export const WRONG_ANSWER = 'WRONG_ANSWER';
+export const GET_NUMBER = 'GET_NUNBER';
+export const ADD_EARNED_MONEY = 'ADD_EARNED_MONEY';
