@@ -1,7 +1,7 @@
 .piramid-money-wrapper {
   position: fixed;
   width: 900px;
-  height: 100wh;
+  height: 100vh;
   left: 1064px;
   top: 50px;
   background-color: #eeeeee;
@@ -11,12 +11,16 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     padding: 10px;
     width: 376px;
 
-    .piramid-money-amount-active {
+    .piramid-money-amount.answered {
+      color: #d0d0d8;
+      border: #d0d0d8;
+    }
+    .piramid-money-amount.current {
       background: #3891b1;
+      color: white;
     }
   }
   .piramid-money-list span {
