@@ -2,23 +2,22 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { GAME } from '../constants/path';
 import '../styles/gameStartStyle.scss';
+import IconLike from '../components/IconLike';
 
-function GameStart() {
+function GameStart(): JSX.Element {
   const navigate = useNavigate();
-  const [active, setActive] = useState(false);
+  const [active, setActive] = useState<boolean>(false);
 
-  const handleClick = () => {
+  const handleClick = (): void => {
     navigate(GAME);
     setActive(true);
   };
   return (
     <div className="page-wrapper">
-      <div className="wrapper-img">
-        <img src={process.env.PUBLIC_URL + '/img/hand_desktop.png'} alt="icon-hand" />
-      </div>
+      <IconLike />
       <div className="wrapper-info">
         <h1>Who wants to be a millionaire?</h1>
-        <button onClick={handleClick} className={active ? 'active' : ''}>
+        <button onClick={handleClick} className={active ? 'active' : ''} type="button">
           {' '}
           Start{' '}
         </button>

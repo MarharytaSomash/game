@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import '../styles/menuPyramidStyle.scss';
 import gameConfig from '../gameConfig.json';
 import { useSelector } from 'react-redux';
@@ -7,7 +7,6 @@ import { FormattedNumber } from 'react-intl';
 
 const MenuPyramid = () => {
   const { numberQuestion } = useSelector((state: RootState) => state);
-  const { earnedMoney } = useSelector((state: RootState) => state);
   const reversedPyramidMoney = [...gameConfig.pyramidMoney].reverse();
 
   return (

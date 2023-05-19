@@ -5,22 +5,19 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../store/reducers/rootReducer';
 import { GAME_FINISH } from '../constants/path';
 import { AnswerCorrect } from '../store/actions/AswerCorrect';
-import '../styles/questionStyle.scss';
 import { AnswerWrong } from '../store/actions/AswerWrong';
 import { ChangeNumberQuestion } from '../store/actions/ChangeNumberQuestion';
 import { AddEarnedMoney } from '../store/actions/AddEarnedMoney';
+import '../styles/questionStyle.scss';
 
 const Question = () => {
   const [isCorrect, setIsCorrect] = useState<boolean | null>(null);
   const navigate = useNavigate();
   const dispatch = useDispatch();
-
-  const { answer } = useSelector((state: RootState) => state);
-  const { numberQuestion } = useSelector((state: RootState) => state);
-  const { earnedMoney } = useSelector((state: RootState) => state);
+  const { answer, numberQuestion } = useSelector((state: RootState) => state);
   const currentQuestion = gameConfig.questions[numberQuestion.id - 1];
 
-  const handleAnswer = (answer: string) => {
+  const handleAnswer = (answer: string): void => {
     setTimeout(() => {
       setIsCorrect(answer === currentQuestion.correctAnswer);
       setTimeout(() => {
