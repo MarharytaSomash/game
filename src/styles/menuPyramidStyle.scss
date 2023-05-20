@@ -3,68 +3,272 @@
   align-items: center;
   justify-content: center;
 }
-.piramid-money-wrapper {
-  position: fixed;
-  width: 900px;
-  height: 100vh;
-  left: 1064px;
-  top: 50px;
-  background-color: #eeeeee;
+@media only screen and (max-width: 320px) {
+  .piramid-money-wrapper {
+    position: fixed;
+    width: 320px;
+    height: 100vh;
+    left: 0px;
+    top: 60px;
+    background-color: #eeeeee;
 
-  .piramid-money-list {
-    @include flex;
-    flex-direction: column;
-    padding: 10px;
-    width: 376px;
+    .piramid-money-list {
+      @include flex;
+      flex-direction: column;
+      padding: 10px;
+      width: 300px;
 
-    .piramid-money-amount.answered {
-      color: #d0d0d8;
-      border: #d0d0d8;
+      .piramid-money-amount.answered {
+        color: #d0d0d8;
+        border: #d0d0d8;
+      }
+      .piramid-money-amount.current {
+        background: #3891b1;
+        color: white;
+      }
     }
-    .piramid-money-amount.current {
-      background: #3891b1;
-      color: white;
+    .piramid-money-list span {
+      @include flex;
+      background-color: #ffffff;
+      border: 1px solid #d0d0d8;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 100%;
+      width: 240px;
+      height: 32px;
+      padding: 0 20px;
+      text-align: center;
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+      position: relative;
+    }
+    .piramid-money-list span::before,
+    .piramid-money-list span::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 0px;
+      height: 4px;
+      background-color: #eaeaea;
+    }
+
+    .piramid-money-list span::before {
+      left: 20px;
+      transform: translate(-50%, -50%);
+    }
+
+    .piramid-money-list span::after {
+      right: 20px;
+      transform: translate(50%, -50%);
+    }
+
+    .piramid-money-list span:focus,
+    .piramid-money-list span:hover {
+      background: #fff3eb;
+      border: 1px solid #1e6a8e;
     }
   }
-  .piramid-money-list span {
-    @include flex;
-    background-color: #ffffff;
-    border: 1px solid #d0d0d8;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 100%;
-    width: 240px;
-    height: 40px;
-    padding: 0 20px;
-    text-align: center;
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-    position: relative;
-  }
-  .piramid-money-list span::before,
-  .piramid-money-list span::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 0px;
-    height: 4px;
-    background-color: #d0d0d8;
-  }
+}
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .piramid-money-wrapper {
+    position: fixed;
+    width: 320px;
+    height: 100vh;
+    left: 35px;
+    top: 60px;
+    background-color: #eeeeee;
 
-  .piramid-money-list span::before {
-    left: 20px;
-    transform: translate(-50%, -50%);
-  }
+    .piramid-money-list {
+      @include flex;
+      flex-direction: column;
+      padding: 10px;
+      width: 300px;
 
-  .piramid-money-list span::after {
-    right: 20px;
-    transform: translate(50%, -50%);
-  }
+      .piramid-money-amount.answered {
+        color: #d0d0d8;
+        border: #d0d0d8;
+      }
+      .piramid-money-amount.current {
+        background: #3891b1;
+        color: white;
+      }
+    }
+    .piramid-money-list span {
+      @include flex;
+      background-color: #ffffff;
+      border: 1px solid #d0d0d8;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 100%;
+      width: 240px;
+      height: 32px;
+      padding: 0 30px;
+      text-align: center;
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+      position: relative;
+    }
+    .piramid-money-list span::before,
+    .piramid-money-list span::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 0px;
+      height: 4px;
+      background-color: #d0d0d8;
+    }
 
-  .piramid-money-list span:focus,
-  .piramid-money-list span:hover {
-    background: #fff3eb;
-    border: 1px solid #1e6a8e;
+    .piramid-money-list span::before {
+      left: 20px;
+      transform: translate(-50%, -50%);
+    }
+
+    .piramid-money-list span::after {
+      right: 20px;
+      transform: translate(50%, -50%);
+    }
+
+    .piramid-money-list span:focus,
+    .piramid-money-list span:hover {
+      background: #fff3eb;
+      border: 1px solid #1e6a8e;
+    }
+  }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+  .piramid-money-wrapper {
+    position: fixed;
+    width: 900px;
+    height: 100vh;
+    left: 850px;
+    top: 60px;
+    background-color: #eeeeee;
+
+    .piramid-money-list {
+      @include flex;
+      flex-direction: column;
+      padding: 10px;
+      width: 376px;
+
+      .piramid-money-amount.answered {
+        color: #dcdce1;
+        border: #d0d0d8;
+      }
+      .piramid-money-amount.current {
+        background: #3891b1;
+        color: white;
+      }
+    }
+    .piramid-money-list span {
+      @include flex;
+      background-color: #ffffff;
+      border: 1px solid #d0d0d8;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 100%;
+      width: 240px;
+      height: 40px;
+      padding: 0 20px;
+      text-align: center;
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+      position: relative;
+    }
+    .piramid-money-list span::before,
+    .piramid-money-list span::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 0px;
+      height: 4px;
+      background-color: #d0d0d8;
+    }
+
+    .piramid-money-list span::before {
+      left: 20px;
+      transform: translate(-50%, -50%);
+    }
+
+    .piramid-money-list span::after {
+      right: 20px;
+      transform: translate(50%, -50%);
+    }
+
+    .piramid-money-list span:focus,
+    .piramid-money-list span:hover {
+      background: #fff3eb;
+      border: 1px solid #1e6a8e;
+    }
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .piramid-money-wrapper {
+    position: fixed;
+    width: 900px;
+    height: 100vh;
+    left: 1064px;
+    top: 50px;
+    background-color: #eeeeee;
+
+    .piramid-money-list {
+      @include flex;
+      flex-direction: column;
+      padding: 10px;
+      width: 376px;
+
+      .piramid-money-amount.answered {
+        color: #d0d0d8;
+        border: #d0d0d8;
+      }
+      .piramid-money-amount.current {
+        background: #3891b1;
+        color: white;
+      }
+    }
+    .piramid-money-list span {
+      @include flex;
+      background-color: #ffffff;
+      border: 1px solid #d0d0d8;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 100%;
+      width: 240px;
+      height: 40px;
+      padding: 0 20px;
+      text-align: center;
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+      position: relative;
+    }
+    .piramid-money-list span::before,
+    .piramid-money-list span::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 0px;
+      height: 4px;
+      background-color: #d0d0d8;
+    }
+
+    .piramid-money-list span::before {
+      left: 20px;
+      transform: translate(-50%, -50%);
+    }
+
+    .piramid-money-list span::after {
+      right: 20px;
+      transform: translate(50%, -50%);
+    }
+
+    .piramid-money-list span:focus,
+    .piramid-money-list span:hover {
+      background: #fff3eb;
+      border: 1px solid #1e6a8e;
+    }
   }
 }

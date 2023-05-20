@@ -1,86 +1,341 @@
 @mixin flex {
   display: flex;
 }
-.question {
-  @include flex;
-  align-items: center;
-  position: absolute;
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 600;
-  font-size: 32px;
-  line-height: 116%;
-  width: 75%;
-  height: 74px;
-  left: 80px;
-  top: 133px;
-  color: #1c1c21;
-}
-
-.hexagon-wrapper {
-  @include flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  list-style-type: none;
-  width: 842px;
-  margin-top: 600px;
-
-  .hexagon {
-    cursor: pointer;
-    margin: 30px auto;
-    width: 400px;
-    display: flex;
+@media only screen and (max-width: 320px) {
+  .question {
+    @include flex;
     align-items: center;
-    justify-content: center;
-  }
-
-  .hexagon button {
-    background-color: #ffffff;
-    border: 1px solid #d0d0d8;
+    position: absolute;
     font-family: 'Inter';
     font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
+    font-weight: 600;
+    font-size: 18px;
     line-height: 116%;
-    width: 421px;
-    height: 72px;
-    padding: 0 20px;
-    text-align: center;
-    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
-    position: relative;
-  }
-  .hexagon button::before,
-  .hexagon button::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    width: 20px;
-    height: 2px;
-    background-color: #d0d0d8;
+    width: 75%;
+    height: 63px;
+    left: 80px;
+    top: 133px;
+    color: #1c1c21;
   }
 
-  .hexagon button::before {
-    left: 10px;
-    transform: translate(-50%, -50%);
+  .hexagon-wrapper {
+    @include flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 280px;
+
+    margin-top: 296px;
+
+    .hexagon {
+      cursor: pointer;
+      margin: 8px 13px;
+      width: 288px;
+    }
+
+    .hexagon button {
+      background-color: #f3f0f0;
+      border: 1px solid #d0d0d8;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 116%;
+      width: 288px;
+      height: 56px;
+      padding: 0 30px;
+      text-align: center;
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+      position: relative;
+    }
+    .hexagon button::before,
+    .hexagon button::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 20px;
+      height: 2px;
+      background-color: #b7b7b9;
+    }
+
+    .hexagon button::before {
+      left: 10px;
+      transform: translate(-50%, -50%);
+    }
+
+    .hexagon button::after {
+      right: 10px;
+      transform: translate(50%, -50%);
+    }
+
+    .hexagon button:focus,
+    .hexagon button:hover {
+      background: #fff3eb;
+      border: 1px solid #1e6a8e;
+    }
+    .hexagon .hexagon-button.correct {
+      background-color: #e6faea;
+      border: 1px solid #47d867;
+    }
   }
 
-  .hexagon button::after {
-    right: 10px;
-    transform: translate(50%, -50%);
-  }
-
-  .hexagon button:focus,
-  .hexagon button:hover {
-    background: #fff3eb;
-    border: 1px solid #1e6a8e;
-  }
-  .hexagon .hexagon-button.correct {
-    background-color: #e6faea;
-    border: 1px solid #47d867;
+  .hexagon .hexagon-button.wrong {
+    background-color: #fdeeed;
+    border: 1px solid #ec6259;
   }
 }
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  .question {
+    @include flex;
+    align-items: center;
+    position: absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 116%;
+    width: 75%;
+    height: 63px;
+    left: 80px;
+    top: 133px;
+    color: #1c1c21;
+  }
 
-.hexagon .hexagon-button.wrong {
-  background-color: #fdeeed;
-  border: 1px solid #ec6259;
+  .hexagon-wrapper {
+    @include flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 280px;
+    margin-top: 296px;
+
+    .hexagon {
+      cursor: pointer;
+      margin: 9px 40px;
+      width: 288px;
+    }
+
+    .hexagon button {
+      background-color: #f3f0f0;
+      border: 1px solid #d0d0d8;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 116%;
+      width: 288px;
+      height: 56px;
+      padding: 0 30px;
+      text-align: center;
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+      position: relative;
+    }
+    .hexagon button::before,
+    .hexagon button::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 20px;
+      height: 2px;
+      background-color: #b7b7b9;
+    }
+
+    .hexagon button::before {
+      left: 10px;
+      transform: translate(-50%, -50%);
+    }
+
+    .hexagon button::after {
+      right: 10px;
+      transform: translate(50%, -50%);
+    }
+
+    .hexagon button:focus,
+    .hexagon button:hover {
+      background: #fff3eb;
+      border: 1px solid #1e6a8e;
+    }
+    .hexagon .hexagon-button.correct {
+      background-color: #e6faea;
+      border: 1px solid #47d867;
+    }
+  }
+
+  .hexagon .hexagon-button.wrong {
+    background-color: #fdeeed;
+    border: 1px solid #ec6259;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1280px) {
+  .question {
+    @include flex;
+    align-items: center;
+    position: absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 116%;
+    width: 75%;
+    height: 74px;
+    left: 80px;
+    top: 133px;
+    color: #1c1c21;
+  }
+
+  .hexagon-wrapper {
+    @include flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 842px;
+    margin-top: 500px;
+
+    .hexagon {
+      cursor: pointer;
+      margin: 30px auto;
+      width: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hexagon button {
+      background-color: #f6f4f4;
+      border: 1px solid #d0d0d8;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 116%;
+      width: 421px;
+      height: 72px;
+      padding: 0 20px;
+      margin-left: 60px;
+      text-align: center;
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+      position: relative;
+    }
+    .hexagon button::before,
+    .hexagon button::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 20px;
+      height: 2px;
+      background-color: #d0d0d8;
+    }
+
+    .hexagon button::before {
+      left: 10px;
+      transform: translate(-50%, -50%);
+    }
+
+    .hexagon button::after {
+      right: 10px;
+      transform: translate(50%, -50%);
+    }
+
+    .hexagon button:focus,
+    .hexagon button:hover {
+      background: #fff3eb;
+      border: 1px solid #1e6a8e;
+    }
+    .hexagon .hexagon-button.correct {
+      background-color: #e6faea;
+      border: 1px solid #47d867;
+    }
+  }
+
+  .hexagon .hexagon-button.wrong {
+    background-color: #fdeeed;
+    border: 1px solid #ec6259;
+  }
+}
+@media only screen and (min-width: 1280px) {
+  .question {
+    @include flex;
+    align-items: center;
+    position: absolute;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 116%;
+    width: 75%;
+    height: 74px;
+    left: 80px;
+    top: 133px;
+    color: #1c1c21;
+  }
+
+  .hexagon-wrapper {
+    @include flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    list-style-type: none;
+    width: 842px;
+    margin-top: 600px;
+
+    .hexagon {
+      cursor: pointer;
+      margin: 30px auto;
+      width: 400px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hexagon button {
+      background-color: #ffffff;
+      border: 1px solid #d0d0d8;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 25px;
+      line-height: 116%;
+      width: 421px;
+      height: 72px;
+      padding: 0 20px;
+      text-align: center;
+      clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+      position: relative;
+    }
+    .hexagon button::before,
+    .hexagon button::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      width: 20px;
+      height: 2px;
+      background-color: #d0d0d8;
+    }
+
+    .hexagon button::before {
+      left: 10px;
+      transform: translate(-50%, -50%);
+    }
+
+    .hexagon button::after {
+      right: 10px;
+      transform: translate(50%, -50%);
+    }
+
+    .hexagon button:focus,
+    .hexagon button:hover {
+      background: #fff3eb;
+      border: 1px solid #1e6a8e;
+    }
+    .hexagon .hexagon-button.correct {
+      background-color: #e6faea;
+      border: 1px solid #47d867;
+    }
+  }
+
+  .hexagon .hexagon-button.wrong {
+    background-color: #fdeeed;
+    border: 1px solid #ec6259;
+  }
 }
